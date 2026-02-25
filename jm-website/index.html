@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>J&M Ontstoppingsbedrijf – 24/7 Riool & Afvoer Service</title>
+<link rel="preconnect" href="https://fonts.bunny.net">
+<link href="https://fonts.bunny.net/css?family=barlow:300,400,500,600|barlow-condensed:400,600,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="scrollToSection('hero')">
+    <div class="nav-logo-icon">🔧</div>
+    <div>
+      <div class="nav-logo-text">J<span>&</span>M</div>
+      <div class="nav-logo-sub">Ontstoppingsbedrijf</div>
+    </div>
+  </div>
+  <ul class="nav-links">
+    <li><a onclick="scrollToSection('diensten')">Diensten</a></li>
+    <li><a onclick="scrollToSection('werkwijze')">Werkwijze</a></li>
+    <li><a onclick="scrollToSection('over-ons')">Over ons</a></li>
+    <li><a onclick="scrollToSection('reviews')">Reviews</a></li>
+    <li><a onclick="scrollToSection('contact')" class="nav-cta">🚨 Spoed bellen</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobile-menu">
+  <a onclick="scrollToSection('diensten'); toggleMenu()">Diensten</a>
+  <a onclick="scrollToSection('werkwijze'); toggleMenu()">Werkwijze</a>
+  <a onclick="scrollToSection('over-ons'); toggleMenu()">Over ons</a>
+  <a onclick="scrollToSection('reviews'); toggleMenu()">Reviews</a>
+  <a onclick="scrollToSection('contact'); toggleMenu()">🚨 Nu bellen – Spoed</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="dither"></div>
+  <canvas id="hero-canvas"></canvas>
+  <div class="hero-content">
+    <div class="hero-badge"><span class="badge-dot"></span>24/7 Beschikbaar door heel Nederland</div>
+    <h1 class="hero-title">
+      Verstopt?<br>
+      <span class="outline">Wij</span> lossen<br>
+      het <span class="accent">op.</span>
+    </h1>
+    <p class="hero-sub">J&M Ontstoppingsbedrijf — snel, betrouwbaar en transparant. Professionele ontstopping van riolen, afvoeren en WC's met vaste tarieven.</p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="scrollToSection('contact')">🚨 Direct bellen</button>
+      <button class="btn-secondary" onclick="scrollToSection('diensten')">Bekijk diensten</button>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="stat-item">
+      <div class="stat-num">24/7</div>
+      <div class="stat-label">Beschikbaar</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">&lt;60'</div>
+      <div class="stat-label">Responstijd</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">NL</div>
+      <div class="stat-label">Heel Nederland</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Vast tarief</div>
+    </div>
+  </div>
+  <div class="scroll-indicator">
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- TICKER -->
+<div class="ticker-wrap" aria-hidden="true">
+  <div class="ticker-track" id="ticker">
+    <span class="ticker-item">Professionele Ontstopping <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Rioolinspectie met Camera <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">24/7 Spoedservice <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Periodiek Onderhoud <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Vaste Tarieven <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Heel Nederland <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Particulier & Zakelijk <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Snel & Betrouwbaar <span class="ticker-sep">◆</span></span>
+    <!-- duplicate for seamless loop -->
+    <span class="ticker-item">Professionele Ontstopping <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Rioolinspectie met Camera <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">24/7 Spoedservice <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Periodiek Onderhoud <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Vaste Tarieven <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Heel Nederland <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Particulier & Zakelijk <span class="ticker-sep">◆</span></span>
+    <span class="ticker-item">Snel & Betrouwbaar <span class="ticker-sep">◆</span></span>
+  </div>
+</div>
+
+<!-- DIENSTEN -->
+<section id="diensten">
+  <div class="services-header">
+    <div>
+      <div class="section-label">Wat wij doen</div>
+      <h2 class="section-title">Onze <span class="accent">Diensten</span></h2>
+    </div>
+    <p style="color:var(--gray);max-width:400px;font-size:0.9rem;line-height:1.6;">Van spoedhulp tot preventief onderhoud — J&M lost elk afvoer- of rioolprobleem op.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-icon">🚿</div>
+      <h3>Afvoer Ontstoppen</h3>
+      <p>Verstopte gootsteen, douche of bad? Wij lossen het snel en effectief op zonder rommel achter te laten.</p>
+      <span class="service-tag">Meest gevraagd</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🚽</div>
+      <h3>WC Ontstoppen</h3>
+      <p>Geblokkeerd toilet? Ons team is binnen de kortste keren ter plaatse voor een snelle en definitieve oplossing.</p>
+      <span class="service-tag">Spoed mogelijk</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔍</div>
+      <h3>Camera Inspectie</h3>
+      <p>Met professionele camera-apparatuur brengen wij de exacte oorzaak van uw rioolprobleem in kaart.</p>
+      <span class="service-tag">High-tech</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🏗️</div>
+      <h3>Riool Ontstoppen</h3>
+      <p>Verstopt buitenriool of kolkput? Wij reinigen professioneel met hogedrukspuit voor blijvend resultaat.</p>
+      <span class="service-tag">Particulier & Zakelijk</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">🔧</div>
+      <h3>Preventief Onderhoud</h3>
+      <p>Voorkom problemen met een periodiek onderhoudscontract. Wij houden uw installaties in topconditie.</p>
+      <span class="service-tag">Aanbevolen</span>
+    </div>
+    <div class="service-card">
+      <div class="service-icon">⚡</div>
+      <h3>24/7 Spoedservice</h3>
+      <p>Dag en nacht, weekend of feestdag — wij zijn altijd bereikbaar voor acute problemen door heel Nederland.</p>
+      <span class="service-tag">Altijd beschikbaar</span>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE + WERKWIJZE -->
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0A2E66"/>
+  </svg>
+</div>
+
+<section id="werkwijze">
+  <div class="werkwijze-header">
+    <div class="section-label" style="justify-content:center;color:var(--lightblue);"><span style="background:var(--lightblue);display:block;width:30px;height:2px;"></span>Hoe wij werken</div>
+    <h2 class="section-title" style="color:white;">Onze <span style="color:var(--orange);">Werkwijze</span></h2>
+    <p style="color:rgba(255,255,255,0.5);margin-top:0.75rem;max-width:500px;margin-left:auto;margin-right:auto;font-size:0.9rem;">In 4 eenvoudige stappen lost J&M uw probleem professioneel en transparant op.</p>
+  </div>
+  <div class="steps-container">
+    <div class="step">
+      <div class="step-num">01</div>
+      <div class="step-icon">📞</div>
+      <h3>U belt ons</h3>
+      <p>Bereikbaar 24/7. Vertel ons uw probleem en locatie — wij plannen direct een afspraak.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <div class="step-icon">🚐</div>
+      <h3>Wij komen snel</h3>
+      <p>Ons team vertrekt zo snel mogelijk richting uw locatie, uitgerust met alle benodigde apparatuur.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <div class="step-icon">🔬</div>
+      <h3>Diagnose & Fix</h3>
+      <p>Wij brengen de oorzaak in kaart en lossen het probleem direct op met professioneel materieel.</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <div class="step-icon">✅</div>
+      <h3>Klaar & Helder</h3>
+      <p>U krijgt duidelijke uitleg over wat er gedaan is en een eerlijke factuur met vaste tarieven.</p>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider" style="transform:scaleY(-1) scaleX(-1);">
+  <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,30 C360,60 720,0 1080,30 C1260,45 1380,20 1440,30 L1440,60 L0,60 Z" fill="#0A2E66"/>
+  </svg>
+</div>
+
+<!-- OVER ONS -->
+<section id="over-ons">
+  <div class="about-inner">
+    <div class="about-visual">
+      <div class="about-img-wrap">
+        <img src="images/bestelbus.jpg" alt="J&M Ontstoppingsbedrijf bestelbus" style="width:100%;height:100%;object-fit:contain;display:block;background:#0A2E66;">
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-num">10+</div>
+        <div class="about-badge-text">Jaar ervaring</div>
+      </div>
+    </div>
+    <div class="about-content">
+      <div class="section-label">Over J&M</div>
+      <h2 class="section-title">Klein team,<br><span class="accent">groot</span> resultaat</h2>
+      <p class="about-desc">J&M Ontstoppingsbedrijf is een ervaren 2-mans team dat door heel Nederland actief is. Wij geloven in eerlijk werk, directe communicatie en vaste tarieven — geen verrassingen op de factuur.</p>
+      <div class="about-features">
+        <div class="about-feature">
+          <div class="feature-check">✓</div>
+          <p><strong>Vaste tarieven, geen verborgen kosten</strong> — u weet vooraf wat u betaalt.</p>
+        </div>
+        <div class="about-feature">
+          <div class="feature-check">✓</div>
+          <p><strong>Professionele camera-apparatuur</strong> voor nauwkeurige diagnose.</p>
+        </div>
+        <div class="about-feature">
+          <div class="feature-check">✓</div>
+          <p><strong>24/7 beschikbaar</strong>, ook in het weekend en op feestdagen.</p>
+        </div>
+        <div class="about-feature">
+          <div class="feature-check">✓</div>
+          <p><strong>Persoonlijk contact</strong> — u spreekt altijd met de monteur zelf.</p>
+        </div>
+        <div class="about-feature">
+          <div class="feature-check">✓</div>
+          <p><strong>Particulier én zakelijk</strong> — wij helpen iedereen snel en efficiënt.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="reviews-header">
+    <div class="section-label" style="justify-content:center;">Wat klanten zeggen</div>
+    <h2 class="section-title">Klant<span class="accent">reviews</span></h2>
+    <p style="color:var(--gray);margin-top:0.75rem;font-size:0.9rem;max-width:450px;margin-left:auto;margin-right:auto;">Onze klanten waarderen onze snelheid, eerlijkheid en vakmanschap.</p>
+  </div>
+  <div class="reviews-grid">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Zondagochtend belde ik om 7 uur met een complete verstopping. Binnen een uur stond J&M voor de deur. Probleem opgelost, prijs zoals afgesproken. Absolute aanrader!"</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">MV</div>
+        <div>
+          <div class="reviewer-name">Mark van der Berg</div>
+          <div class="reviewer-loc">Amsterdam</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Camera-inspectie uitgevoerd voor onze zaak. Zeer professioneel, duidelijke uitleg en eerlijke prijs. We hebben nu een onderhoudscontract — nooit meer onverwachte problemen."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">LS</div>
+        <div>
+          <div class="reviewer-name">Laura Smits</div>
+          <div class="reviewer-loc">Rotterdam, Horeca</div>
+        </div>
+      </div>
+    </div>
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">"Eindelijk een loodgieter die doet wat hij zegt. Vaste prijs, op tijd, netjes werken. De WC werkt weer perfect. Ik bel nooit meer iemand anders."</p>
+      <div class="reviewer">
+        <div class="reviewer-avatar">PD</div>
+        <div>
+          <div class="reviewer-name">Peter de Vries</div>
+          <div class="reviewer-loc">Utrecht</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA / CONTACT -->
+<section id="contact">
+  <div class="contact-inner contact-inner-wide">
+    <!-- Top header -->
+    <div class="section-label" style="justify-content:center;">Neem contact op</div>
+    <h2 class="contact-title">Klaar om uw<br>probleem <span class="accent">op te lossen?</span></h2>
+    <p class="contact-sub">Bel ons direct voor spoedgevallen of stuur een bericht — wij reageren zo snel mogelijk.</p>
+
+    <!-- Two column layout: info + form -->
+    <div class="contact-two-col">
+
+      <!-- Left: info + bel -->
+      <div class="contact-info-col">
+        <div class="contact-info-card">
+          <div class="cic-label">🚨 Spoed? Bel direct</div>
+          <a href="tel:+31614392215" class="contact-call-btn">📞 +31 (0)6 14392215</a>
+          <p class="cic-sub">24/7 bereikbaar, ook in het weekend</p>
+        </div>
+
+        <div class="contact-details">
+          <div class="cd-item">
+            <span class="cd-icon">✉️</span>
+            <div>
+              <div class="cd-label">E-mail</div>
+              <div class="cd-val"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d0b9beb6bf90bfbea4a3a4bfa0a0b9beb7b2b5b4a2b9bab6babdfebebc">[email&#160;protected]</a></div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <span class="cd-icon">📍</span>
+            <div>
+              <div class="cd-label">Adres</div>
+              <div class="cd-val">Goejanverwelle 78, 3467PR Hekendorp</div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <span class="cd-icon">🕐</span>
+            <div>
+              <div class="cd-label">Beschikbaarheid</div>
+              <div class="cd-val">24/7 · 365 dagen per jaar</div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <span class="cd-icon">🌍</span>
+            <div>
+              <div class="cd-label">Werkgebied</div>
+              <div class="cd-val">Heel Nederland</div>
+            </div>
+          </div>
+          <div class="cd-item">
+            <span class="cd-icon">💶</span>
+            <div>
+              <div class="cd-label">Tarief</div>
+              <div class="cd-val">Vast & transparant, geen verrassingen</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: contact form via Formspree -->
+      <div class="contact-form-col">
+        <div class="form-card">
+          <h3 class="form-title">Stuur ons een bericht</h3>
+          <p class="form-sub">Wij reageren binnen 24 uur — voor spoed altijd bellen.</p>
+
+          <form id="contact-form" action="https://formspree.io/f/xdalybpa" method="POST" onsubmit="handleFormSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Naam *</label>
+                <input type="text" name="naam" class="form-input" placeholder="Uw volledige naam" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Telefoon</label>
+                <input type="tel" name="telefoon" class="form-input" placeholder="+31 6 ...">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">E-mailadres *</label>
+              <input type="email" name="email" class="form-input" placeholder="uwmail@voorbeeld.nl" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Type probleem</label>
+              <select name="probleem" class="form-input form-select">
+                <option value="" disabled selected>Selecteer een optie</option>
+                <option value="Afvoer verstopt">Afvoer verstopt</option>
+                <option value="WC verstopt">WC verstopt</option>
+                <option value="Riool verstopt">Riool verstopt</option>
+                <option value="Camera inspectie">Camera inspectie gewenst</option>
+                <option value="Preventief onderhoud">Preventief onderhoud</option>
+                <option value="Anders">Anders</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Uw bericht *</label>
+              <textarea name="bericht" class="form-input form-textarea" placeholder="Beschrijf kort uw probleem en uw adres..." required></textarea>
+            </div>
+            <input type="hidden" name="_subject" value="Nieuw bericht via website J&M">
+            <input type="hidden" name="_next" value="">
+            <button type="submit" class="form-submit-btn" id="form-submit-btn">
+              <span id="btn-text">Verstuur bericht ✉️</span>
+            </button>
+          </form>
+
+          <!-- Success message -->
+          <div class="form-success" id="form-success">
+            <div class="form-success-icon">✅</div>
+            <h4>Bericht verzonden!</h4>
+            <p>Bedankt voor uw bericht. Wij nemen zo snel mogelijk contact met u op.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="footer-top">
+    <div class="footer-grid">
+
+      <!-- Brand -->
+      <div class="footer-col footer-brand">
+        <div class="footer-logo">
+          <div class="footer-logo-icon">🔧</div>
+          <div>
+            <div class="footer-logo-text">J<span>&amp;</span>M</div>
+            <div class="footer-logo-sub">Ontstoppingsbedrijf</div>
+          </div>
+        </div>
+        <p class="footer-desc">Gespecialiseerd riool- en afvoerservicebedrijf. Snel, betrouwbaar en transparant — 24/7 door heel Nederland.</p>
+        <div class="footer-badge">
+          <span class="footer-badge-dot"></span>
+          Nu beschikbaar voor spoedgevallen
+        </div>
+      </div>
+
+      <!-- Diensten -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Diensten</h4>
+        <ul class="footer-links">
+          <li><span onclick="scrollToSection('diensten')">Afvoer Ontstoppen</span></li>
+          <li><span onclick="scrollToSection('diensten')">WC Ontstoppen</span></li>
+          <li><span onclick="scrollToSection('diensten')">Camera Inspectie</span></li>
+          <li><span onclick="scrollToSection('diensten')">Riool Ontstoppen</span></li>
+          <li><span onclick="scrollToSection('diensten')">Preventief Onderhoud</span></li>
+          <li><span onclick="scrollToSection('diensten')">24/7 Spoedservice</span></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Contact</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <div class="fc-icon">📞</div>
+            <div>
+              <div class="fc-label">Telefoon (ook spoed)</div>
+              <div class="fc-value">+31 (0)6 14392215</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">✉️</div>
+            <div>
+              <div class="fc-label">E-mail</div>
+              <div class="fc-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="167f7870795679786265627966667f7871747372647f7c707c7b38787a">[email&#160;protected]</a></div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">📍</div>
+            <div>
+              <div class="fc-label">Adres</div>
+              <div class="fc-value">Goejanverwelle 78<br>3467PR Hekendorp</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">🕐</div>
+            <div>
+              <div class="fc-label">Beschikbaarheid</div>
+              <div class="fc-value">24/7 · 365 dagen per jaar</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">🌍</div>
+            <div>
+              <div class="fc-label">Werkgebied</div>
+              <div class="fc-value">Heel Nederland</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bedrijfsinfo -->
+      <div class="footer-col">
+        <h4 class="footer-heading">Bedrijfsinfo</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <div class="fc-icon">🏢</div>
+            <div>
+              <div class="fc-label">Bedrijfsnaam</div>
+              <div class="fc-value">Ontstoppingsbedrijf J&amp;M</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">📋</div>
+            <div>
+              <div class="fc-label">KvK-nummer</div>
+              <div class="fc-value">Neem contact op</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">💶</div>
+            <div>
+              <div class="fc-label">Betaling</div>
+              <div class="fc-value">Pin · Contant · Factuur</div>
+            </div>
+          </li>
+          <li>
+            <div class="fc-icon">🛡️</div>
+            <div>
+              <div class="fc-label">Verzekerd</div>
+              <div class="fc-value">Volledig aansprakelijkheidsverzekerd</div>
+            </div>
+          </li>
+        </ul>
+        <a href="tel:+31614392215" class="footer-cta-btn" style="text-decoration:none;display:block;text-align:center;">🚨 Direct bellen</a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer bottom bar -->
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p>© 2025 <span>Ontstoppingsbedrijf J&amp;M</span> · Goejanverwelle 78, 3467PR Hekendorp · KvK: op aanvraag</p>
+      <div class="footer-policy-links">
+        <span onclick="openModal('privacy')">Privacybeleid</span>
+        <span class="sep">·</span>
+        <span onclick="openModal('voorwaarden')">Algemene Voorwaarden</span>
+        <span class="sep">·</span>
+        <span onclick="openModal('cookies')">Cookiebeleid</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- MODALS -->
+<div class="modal-overlay" id="modal-overlay" onclick="closeModal()"></div>
+
+<!-- Privacybeleid -->
+<div class="modal" id="modal-privacy">
+  <div class="modal-header">
+    <h2>Privacybeleid</h2>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <p class="modal-date">Laatst bijgewerkt: januari 2025</p>
+
+    <h3>1. Wie zijn wij?</h3>
+    <p>Ontstoppingsbedrijf J&amp;M, gevestigd aan Goejanverwelle 78, 3467PR Hekendorp. U kunt ons bereiken via <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a7cec9c1c8e7c8c9d3d4d3c8d7d7cec9c0c5c2c3d5cecdc1cdca89c9cb">[email&#160;protected]</a></strong> of <strong>+31 (0)6 14392215</strong>.</p>
+
+    <h3>2. Welke gegevens verzamelen wij?</h3>
+    <p>Wij verwerken de volgende persoonsgegevens uitsluitend voor het uitvoeren van onze dienstverlening:</p>
+    <ul>
+      <li>Naam en adresgegevens (voor het plannen van een afspraak)</li>
+      <li>Telefoonnummer en/of e-mailadres (voor communicatie)</li>
+      <li>Beschrijving van het probleem (voor een adequate dienstverlening)</li>
+      <li>Factuurgegevens (voor de administratie)</li>
+    </ul>
+
+    <h3>3. Waarom verwerken wij uw gegevens?</h3>
+    <p>Uw gegevens worden uitsluitend gebruikt voor:</p>
+    <ul>
+      <li>Het plannen en uitvoeren van onze diensten</li>
+      <li>Het opstellen en verzenden van facturen</li>
+      <li>Communicatie over uw opdracht</li>
+      <li>Het voldoen aan wettelijke verplichtingen</li>
+    </ul>
+
+    <h3>4. Hoe lang bewaren wij uw gegevens?</h3>
+    <p>Wij bewaren uw gegevens niet langer dan noodzakelijk. Factuurgegevens worden conform de wettelijke bewaartermijn 7 jaar bewaard. Overige contactgegevens worden uiterlijk 2 jaar na de laatste dienstverlening verwijderd.</p>
+
+    <h3>5. Delen wij uw gegevens?</h3>
+    <p>Wij verkopen uw gegevens nooit aan derden. Wij delen uw gegevens alleen indien dit wettelijk verplicht is of strikt noodzakelijk voor de uitvoering van onze diensten (bijv. een ingeschakelde onderaannemer).</p>
+
+    <h3>6. Uw rechten</h3>
+    <p>U heeft het recht op inzage, correctie of verwijdering van uw persoonsgegevens. U kunt hiervoor contact opnemen via <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="84edeae2ebc4ebeaf0f7f0ebf4f4edeae3e6e1e0f6edeee2eee9aaeae8">[email&#160;protected]</a></strong>. Wij reageren binnen 30 dagen.</p>
+
+    <h3>7. Beveiliging</h3>
+    <p>Wij nemen passende technische en organisatorische maatregelen om uw persoonsgegevens te beschermen tegen ongeautoriseerde toegang of verlies.</p>
+
+    <h3>8. Klachten</h3>
+    <p>Heeft u een klacht over de verwerking van uw persoonsgegevens? U kunt een klacht indienen bij de Autoriteit Persoonsgegevens via <strong>autoriteitpersoonsgegevens.nl</strong>.</p>
+  </div>
+</div>
+
+<!-- Algemene Voorwaarden -->
+<div class="modal" id="modal-voorwaarden">
+  <div class="modal-header">
+    <h2>Algemene Voorwaarden</h2>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <p class="modal-date">Versie: januari 2025 · Ontstoppingsbedrijf J&amp;M</p>
+
+    <h3>Artikel 1 – Definities</h3>
+    <p><strong>Opdrachtnemer:</strong> Ontstoppingsbedrijf J&amp;M, gevestigd te Hekendorp.<br>
+    <strong>Opdrachtgever:</strong> De natuurlijke of rechtspersoon die een opdracht verstrekt.<br>
+    <strong>Opdracht:</strong> De overeengekomen werkzaamheden op het gebied van riool- en afvoerservice.</p>
+
+    <h3>Artikel 2 – Toepasselijkheid</h3>
+    <p>Deze algemene voorwaarden zijn van toepassing op alle offertes, opdrachten en overeenkomsten tussen J&amp;M en de opdrachtgever. Afwijkingen zijn alleen geldig indien schriftelijk overeengekomen.</p>
+
+    <h3>Artikel 3 – Offertes en prijzen</h3>
+    <p>Alle prijzen zijn inclusief BTW tenzij anders vermeld. Opgegeven tarieven zijn vaste tarieven. Bij meerwerk wordt vooraf overleg gevoerd en schriftelijke of mondelinge toestemming gevraagd.</p>
+
+    <h3>Artikel 4 – Uitvoering van de opdracht</h3>
+    <p>J&amp;M voert werkzaamheden uit naar beste inzicht en vermogen. Wij zijn gerechtigd derden in te schakelen voor de uitvoering van de opdracht. De opdrachtgever zorgt voor een veilige en toegankelijke werkplek.</p>
+
+    <h3>Artikel 5 – Betaling</h3>
+    <p>Betaling dient te geschieden direct na uitvoering van de werkzaamheden, tenzij schriftelijk anders overeengekomen. Bij niet-tijdige betaling is J&amp;M gerechtigd wettelijke rente en incassokosten in rekening te brengen.</p>
+
+    <h3>Artikel 6 – Aansprakelijkheid</h3>
+    <p>J&amp;M is aansprakelijkheidsverzekerd. Aansprakelijkheid is beperkt tot het bedrag van de opdracht. J&amp;M is niet aansprakelijk voor indirecte schade of gevolgschade.</p>
+
+    <h3>Artikel 7 – Garantie</h3>
+    <p>Op uitgevoerde werkzaamheden geldt een garantieperiode van 30 dagen, tenzij schriftelijk anders overeengekomen. De garantie vervalt bij oneigenlijk gebruik of externe oorzaken.</p>
+
+    <h3>Artikel 8 – Klachten</h3>
+    <p>Klachten dienen binnen 14 dagen na de werkzaamheden schriftelijk gemeld te worden via <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="7c15121a133c1312080f08130c0c15121b1e19180e15161a1611521210">[email&#160;protected]</a></strong>. Wij streven naar een oplossing binnen 10 werkdagen.</p>
+
+    <h3>Artikel 9 – Toepasselijk recht</h3>
+    <p>Op alle overeenkomsten is Nederlands recht van toepassing. Geschillen worden voorgelegd aan de bevoegde rechter in het arrondissement waar J&amp;M gevestigd is.</p>
+  </div>
+</div>
+
+<!-- Cookiebeleid -->
+<div class="modal" id="modal-cookies">
+  <div class="modal-header">
+    <h2>Cookiebeleid</h2>
+    <button class="modal-close" onclick="closeModal()">✕</button>
+  </div>
+  <div class="modal-body">
+    <p class="modal-date">Laatst bijgewerkt: januari 2025</p>
+
+    <h3>1. Wat zijn cookies?</h3>
+    <p>Cookies zijn kleine tekstbestanden die op uw apparaat worden opgeslagen wanneer u onze website bezoekt. Ze helpen ons de website goed te laten functioneren.</p>
+
+    <h3>2. Welke cookies gebruiken wij?</h3>
+    <p><strong>Functionele cookies (noodzakelijk):</strong> Deze cookies zijn essentieel voor het goed functioneren van de website. Ze slaan geen persoonsgegevens op en vereisen geen toestemming.</p>
+    <p><strong>Analytische cookies:</strong> Wij maken geen gebruik van analytische tracking-cookies van derden zoals Google Analytics.</p>
+    <p><strong>Marketing cookies:</strong> Wij plaatsen geen marketing- of advertentiecookies.</p>
+
+    <h3>3. Cookies van derden</h3>
+    <p>Onze website maakt gebruik van Bunny Fonts voor het laden van lettertypes. Deze dienst kan een functionele cookie plaatsen. Raadpleeg het privacybeleid van Bunny.net voor meer informatie.</p>
+
+    <h3>4. Cookies beheren of verwijderen</h3>
+    <p>U kunt cookies beheren of verwijderen via de instellingen van uw browser. Houd er rekening mee dat het uitschakelen van cookies de werking van de website kan beïnvloeden.</p>
+    <ul>
+      <li><strong>Chrome:</strong> Instellingen → Privacy en beveiliging → Cookies</li>
+      <li><strong>Firefox:</strong> Instellingen → Privacy en beveiliging</li>
+      <li><strong>Safari:</strong> Voorkeuren → Privacy</li>
+      <li><strong>Edge:</strong> Instellingen → Cookies en sitemachtigingen</li>
+    </ul>
+
+    <h3>5. Wijzigingen</h3>
+    <p>Wij behouden het recht dit cookiebeleid te wijzigen. De meest actuele versie is altijd beschikbaar op onze website.</p>
+
+    <h3>6. Contact</h3>
+    <p>Vragen over ons cookiebeleid? Neem contact op via <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="61080f070e210e0f1512150e1111080f0603040513080b070b0c4f0f0d">[email&#160;protected]</a></strong> of <strong>+31 (0)6 14392215</strong>.</p>
+  </div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
